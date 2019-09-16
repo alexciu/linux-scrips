@@ -10,4 +10,4 @@ alias fastping='ping -c 100 -s.2'
 alias update='sudo apt-get update && sudo apt-get upgrade'
 
 #backup work folder
-alias backup='rsync -av --delete /home/ciu/Work /mnt/Date/BackUp'
+alias backup='rsync -av --delete /home/ciu/Work /mnt/Date/Backup'
