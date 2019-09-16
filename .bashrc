@@ -116,9 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-###################
-###  neofetch  ####
-###################
+#################################
+###       neofetch            ###
+###  apt-get install neofetch ###
+#################################
 
 neofetch
 
