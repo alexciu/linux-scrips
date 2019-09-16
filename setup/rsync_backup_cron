@@ -1,0 +1,18 @@
+#To edit the cron table file for the user you are logged in as, run:
+
+crontab -e
+
+#add this line in the cron file - face backup la ~/Work in /mnt/Backup in fiecare zi la ora 10PM
+
+0 22 * * * rsync -av ~/Work /mnt/Backup
+
+
+#docs
+#https://www.howtogeek.com/135533/how-to-use-rsync-to-backup-your-data-on-linux/
+
+#SSH
+#rsync -av –delete -e ssh /Directory1/ geek@192.168.235.137:/Directory2/
+#rsync -av –delete -e ssh /Directory1/ msi:/Directory2/
+
+#ZIP
+#zip /ZippedFiles/archive.zip /Directory1/ && rsync -av --delete /ZippedFiles/ /Directory2/

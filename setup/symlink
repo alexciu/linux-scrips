@@ -1,0 +1,4 @@
+#https://shapeshed.com/unix-ln/
+
+ln -s /mnt/Date ~/Desktop/Date
+

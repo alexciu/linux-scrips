@@ -1,0 +1,75 @@
+#check if a package is instaled or not
+dpkg -s <package-name> |  grep Status
+
+============== copy - move - delete ========================
+
+#https://linuxize.com/post/how-to-move-files-in-linux-with-mv-command/
+#https://linuxize.com/post/how-to-remove-files-and-directories-using-linux-command-line/
+#https://linuxize.com/post/how-to-copy-files-and-directories-in-linux
+
+
+cp file.txt file_backup.txt
+
+#interactiv -i
+cp -i file.txt file_backup.txt
+
+#When using the cp command to copy a file, the new file will be owned by the user performing the command. Use the -p option to preserve the file mode, ownership and timestamps
+cp -p file.txt file_backup.txt
+
+#Another option that can be useful is -v. When using this option the command will print what is being done
+cp -v file.txt file_backup.txt
+
+#copying the file file.txt to the /backup
+cp file.txt /backup
+cp *.png /backup
+
+#copy directories -R 
+cp -Rv .ssh .ssh_backup
+
+#or use RSYNC
+
+rsync -a file.txt file_backup.txt
+rsync -a /var/www/public_html/ /var/www/public_html_backup/
+
+
+#REMOVE
+
+# -f to force
+rm -f filename(s)
+
+rm -r dirname
+
+#=====================  SSH  ===============================
+
+#scan network
+sudo nmap -sn 192.168.0.0/24
+
+#ssh in retea
+ssh ciu@192.168.xxx.xxx
+
+#create a file on ~/.ssh/config
+
+Host msi
+    HostName 192.168.xxx.xxx
+    User ciu
+
+#then you can connect like: $ ssh msi
+
+#adding keys for local machines (no pass required when ssh)
+
+#generate Generate keys - if not exist yet
+
+ssh-keygen
+
+#Copy public key to target machine:
+
+ssh-copy-id ciu@192.168.xxx.xxx
+
+OR
+
+ssh-copy-id msi
+
+#Providing you have the appropriate tools on your computer, GUI programs that you use on the remote system will now open their window on your local system.
+ssh -X remote_host
+
+#========================================================
