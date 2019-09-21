@@ -56,6 +56,11 @@ cd fonts
 cd ..
 rm -rf fonts
 
+sudo apt-get install fonts-noto
+sudo apt-get install fonts-droid-fallback
+
+sudo apt-get install typecatcher
+
 #=================================
 
 #https://github.com/balena-io/etcher
